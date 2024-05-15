@@ -128,7 +128,7 @@ function Example() {
 							) : (
 								<ImageVariant
 									source={SendImage}
-									style={{ tintColor: colors.purple500 }}
+									style={{ tintColor: colors.teal500 }}
 								/>
 							)}
 						</TouchableOpacity>
@@ -140,7 +140,7 @@ function Example() {
 						>
 							<ImageVariant
 								source={ColorsWatchImage}
-								style={{ tintColor: colors.purple500 }}
+								style={{ tintColor: colors.teal500 }}
 							/>
 						</TouchableOpacity>
 
@@ -153,7 +153,7 @@ function Example() {
 						>
 							<ImageVariant
 								source={TranslateImage}
-								style={{ tintColor: colors.purple500 }}
+								style={{ tintColor: colors.teal500 }}
 							/>
 						</TouchableOpacity>
 					</View>
