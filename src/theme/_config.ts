@@ -1,6 +1,46 @@
 import { DarkTheme, DefaultTheme } from "@react-navigation/native";
 
 import type { ThemeConfiguration } from "@/types/theme/config";
+import { Radio, extendTheme } from "native-base";
+
+export const theme = extendTheme({
+  colors: {
+    // Add new color
+    primary: {
+      500: "#1E7075",
+      400: "#91C6CA",
+      300: "#D2E2E3",
+    },
+    // Redefining only one shade, rest of the color will remain same.
+    amber: {
+      400: "#d97706",
+    },
+    dark: {
+      800: "#313131",
+    },
+  },
+  config: {
+    // Changing initialColorMode to 'dark'
+    initialColorMode: "light",
+  },
+  components: {
+    Radio: {
+      baseStyle: {
+        bg: "red",
+        // Override default styles for radio button
+        borderColor: "#91C6CA",
+        _checked: {
+          borderColor: "primary.500", // Change the background color when checked
+          _icon: {
+            color: "primary.500",
+          },
+        },
+
+        // You can customize other styles here
+      },
+    },
+  },
+});
 
 const colorsLight = {
   white: "#ffffff",

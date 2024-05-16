@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/theme";
 import ApplicationNavigator from "./navigators/Application";
 import "./translations";
 import { NativeBaseProvider } from "native-base";
+import { theme } from "./theme/_config";
 
 const queryClient = new QueryClient();
 
@@ -15,7 +16,7 @@ export const storage = new MMKV();
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <NativeBaseProvider>
+      <NativeBaseProvider theme={theme}>
         <ThemeProvider storage={storage}>
           <ApplicationNavigator />
         </ThemeProvider>

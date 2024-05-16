@@ -15,14 +15,14 @@ function ApplicationNavigator() {
 
   return (
     <NavigationContainer theme={navigationTheme}>
-      <Tab.Navigator>
+      {/* <Tab.Navigator>
         <Tab.Screen name="Startup" component={Startup} />
         <Tab.Screen name="Example" component={Example} />
-      </Tab.Navigator>
-      {/* <Stack.Navigator key={variant} screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Startup" component={Startup} />
+      </Tab.Navigator> */}
+      <Stack.Navigator key={variant} screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Example" component={Example} />
-      </Stack.Navigator> */}
+        <Stack.Screen name="Startup" component={Startup} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }

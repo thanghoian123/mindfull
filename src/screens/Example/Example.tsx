@@ -22,6 +22,14 @@ import { isImageSourcePropType } from "@/types/guards/image";
 import SendImage from "@/theme/assets/images/send.png";
 import ColorsWatchImage from "@/theme/assets/images/colorswatch.png";
 import TranslateImage from "@/theme/assets/images/translate.png";
+import { HStack, Icon, WarningOutlineIcon } from "native-base";
+import Checkbox from "@/components/molecules/Checkbox";
+import Select from "@/components/molecules/Select";
+import Badge from "@/components/molecules/Badge";
+import Button from "@/components/molecules/Button";
+import Input from "@/components/molecules/Input";
+import RadioGroup from "@/components/molecules/Radio";
+import Switch from "@/components/molecules/Switch";
 
 function Example() {
   const { t } = useTranslation(["example", "welcome"]);
@@ -72,6 +80,39 @@ function Example() {
   return (
     <SafeScreen>
       <ScrollView>
+        <HStack space={6}>
+          <Select label="Test" items={[{ label: "item1", value: "1" }]} />
+        </HStack>
+
+        <Badge text="Thesaadf" />
+
+        <Button
+          text="Submit"
+          onPress={() => {
+            console.log("------");
+          }}
+        />
+
+        <Input
+          onChangeText={(t) => {
+            console.log("🚀 ~ Example ~ t:", t);
+          }}
+          placeholder="asdfasd"
+          InputLeftElement={<WarningOutlineIcon size="xs" />}
+        />
+
+        <RadioGroup
+          value="2"
+          name="ssss"
+          items={[
+            { value: "1", label: "one" },
+            { value: "2", label: "two" },
+          ]}
+          isHorizontal
+        />
+
+        <Switch value={true} label="ddsdfsdf" />
+
         <View
           style={[
             layout.justifyCenter,
