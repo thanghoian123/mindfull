@@ -3,13 +3,15 @@ import type { StackScreenProps } from "@react-navigation/stack";
 
 export type ApplicationStackParamList = {
   Startup: undefined;
-  Example: undefined;
+  MainScreen: undefined;
 };
 
 export type ApplicationScreenProps =
   | StackScreenProps<ApplicationStackParamList>
   | any;
+  
 export type RootTabParamList = {
-  Startup: undefined;
-  Example: undefined;
+  HomeScreen: undefined;
+  ChatScreen: undefined;
+  ReportScreen: undefined;
 };
