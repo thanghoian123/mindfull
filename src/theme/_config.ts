@@ -1,7 +1,7 @@
 import { DarkTheme, DefaultTheme } from "@react-navigation/native";
 
 import type { ThemeConfiguration } from "@/types/theme/config";
-import { Radio, extendTheme } from "native-base";
+import { Checkbox, Radio, extendTheme } from "native-base";
 
 export const theme = extendTheme({
   colors: {
@@ -26,7 +26,20 @@ export const theme = extendTheme({
   components: {
     Radio: {
       baseStyle: {
-        bg: "red",
+        // Override default styles for radio button
+        borderColor: "#91C6CA",
+        _checked: {
+          borderColor: "primary.500", // Change the background color when checked
+          _icon: {
+            color: "primary.500",
+          },
+        },
+
+        // You can customize other styles here
+      },
+    },
+    Checkbox: {
+      baseStyle: {
         // Override default styles for radio button
         borderColor: "#91C6CA",
         _checked: {

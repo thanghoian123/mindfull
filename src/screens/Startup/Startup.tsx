@@ -21,13 +21,6 @@ function Startup({ navigation }: ApplicationScreenProps) {
 		},
 	});
 
-	useEffect(() => {
-		navigation.reset({
-			index: 0,
-			routes: [{ name: 'Example' }],
-		});
-	}, [isSuccess]);
-
 	return (
 		<SafeScreen>
 			<View

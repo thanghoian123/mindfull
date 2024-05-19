@@ -9,9 +9,13 @@ export type ApplicationStackParamList = {
 export type ApplicationScreenProps =
   | StackScreenProps<ApplicationStackParamList>
   | any;
-  
+
 export type RootTabParamList = {
   HomeScreen: undefined;
   ChatScreen: undefined;
   ReportScreen: undefined;
+};
+
+export type ReportStackParamList = {
+  StressAndMoodTrackingScreen: undefined;
 };
